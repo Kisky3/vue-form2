@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* clearfix�p
+************************************************************************* */
+.clearfix:after {
+  /*for modern browser*/
+  content: '.';
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+.clearfix {
+  /*for IE7*/
+  min-height: 1px;
+}
+* html .clearfix {
+  /*for IE6 below, MacIE5*/
+  /*\*/ /*/
+	overflow: hidden;
+	height: auto;
+	/**/
+  height: 1px;
+}

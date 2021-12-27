@@ -1,0 +1,54 @@
+{
+  "name": "form-sample",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "vue-cli-service lint",
+    "serve": "NODE_ENV='development' VUE_APP_EVN=local vue-cli-service serve",
+    "serve:local": "NODE_ENV='development' VUE_APP_EVN=local vue-cli-service serve",
+    "serve:test": "NODE_ENV='development' VUE_APP_EVN=test vue-cli-service serve",
+    "serve:dev": "NODE_ENV='development' VUE_APP_EVN=development vue-cli-service serve",
+    "serve:dev-vn": "NODE_ENV='development' VUE_APP_EVN=developmentVn vue-cli-service serve",
+    "serve:stg": "NODE_ENV='production' VUE_APP_EVN=staging vue-cli-service serve",
+    "build:test": "NODE_ENV='development' VUE_APP_EVN=test vue-cli-service build",
+    "build:dev": "NODE_ENV='development' VUE_APP_EVN=development vue-cli-service build",
+    "build:dev-vn": "NODE_ENV='development' VUE_APP_EVN=developmentVn vue-cli-service build",
+    "build:stg": "NODE_ENV='production' VUE_APP_EVN=staging vue-cli-service build",
+    "build:prod": "NODE_ENV='production' VUE_APP_EVN=production vue-cli-service build",
+    "serve:local-win": "set NODE_ENV=development VUE_APP_EVN=local & vue-cli-service serve",
+    "build:prod-win": "set NODE_ENV=production VUE_APP_EVN=production & vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.1.2",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "node-sass": "4.14.1",
+    "popper.js": "^1.16.1",
+    "sass-loader": "8.0.2",
+    "ua-parser-js": "^0.7.28",
+    "url-search-params-polyfill": "^5.0.0",
+    "vee-validate": "^2.1.7",
+    "vue": "^2.6.6",
+    "vue-scrollto": "^2.20.0",
+    "vuex": "^3.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "prettier": "^1.16.4",
+    "vue-template-compiler": "^2.6.6"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  }
+}

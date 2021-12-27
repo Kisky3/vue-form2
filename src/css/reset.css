@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+body {
+  background-color: #ffffff;
+  font-family: ArialMT, 'Hiragino Kaku Gothic ProN', 'qMmpS ProN W3';
+  color: #000000;
+  font-size: 0;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  -webkit-text-size-adjust: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li,
+dl,
+dt,
+dd {
+  list-style: none outside none;
+}
+img {
+  vertical-align: top;
+}
+a img {
+  border: medium none;
+}
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #004ab8;
+}
+a:visited {
+  color: #9900cc;
+}
+a:hover {
+  color: #0000ff;
+}
+a:active {
+  color: #0000ff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+p {
+  margin: 0 0 1em;
+}
+select option {
+  padding: 0 5px;
+}
+input {
+  margin: 0;
+  vertical-align: middle;
+}
+th,
+td {
+  padding: 3px;
+}
+th {
+  background-color: #f3f3f3;
+}

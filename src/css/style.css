@@ -1,0 +1,458 @@
+@charset "UTF-8";
+
+/*********************************************************************
+*
+* 仕入れ・買取ショップ加盟店募集 汎用フォーム
+*
+*********************************************************************/
+
+/*---------------------------------------
+  基本設定
+-----------------------------------------*/
+body {
+  display: none;
+}
+
+/* PC用 */
+.pc_display {
+  display: block !important;
+}
+.sp_display {
+  display: none !important;
+}
+
+/* スマートフォン用 */
+@media screen and (min-width: 0) and (max-width: 768px) {
+  .pc_display {
+    display: none !important;
+  }
+  .sp_display {
+    display: block !important;
+  }
+}
+
+#contents {
+  padding-bottom: 0;
+}
+#mainBody,
+#sdBox {
+  font-family: 'メイリオ', Meiryo, sans-serif;
+}
+#mainBody {
+  float: none !important;
+  width: 960px;
+}
+.topicpath_new {
+  margin-bottom: 15px;
+}
+
+/* スマートフォン用 */
+@media screen and (min-width: 0) and (max-width: 768px) {
+  #contents {
+    min-width: 320px;
+  }
+
+  #mainBody {
+    width: auto !important;
+  }
+}
+
+/*---------------------------------------
+  コンテンツ
+-----------------------------------------*/
+.client_frm {
+}
+
+.client_frm .heading {
+  padding-top: 20px;
+}
+
+.client_frm .heading .title {
+  color: #ff6600;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.client_frm .heading p {
+  font-size: 14px;
+}
+
+/* フォーム
+-----------------------------*/
+.client_frm .tbl_form table {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.client_frm .tbl_form table th {
+  width: 170px;
+  padding: 10px 0 5px;
+  background: #ffdbb7;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.client_frm .tbl_form table th .required {
+  background: #ff6600;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 2px 0 0;
+  padding: 1px 5px;
+}
+
+.client_frm .tbl_form table td {
+  padding: 10px 15px;
+  background: #ffecd9;
+}
+
+.client_frm .tbl_form table td table th {
+  background: none !important;
+  padding: 0;
+  text-align: left;
+  width: 1px;
+  color: #333 !important;
+}
+
+.client_frm .tbl_form table td table td {
+  padding: 0;
+}
+
+.client_frm .tbl_form table .add_area table {
+}
+
+.client_frm .tbl_form table .add_area table th {
+  width: 80px;
+}
+
+.client_frm .tbl_form table .add_area table th.v_top {
+  padding: 4px 0 0;
+  vertical-align: top;
+}
+
+.client_frm .tbl_form table .add_area table td p {
+  margin-bottom: 0 !important;
+  font-size: 12px;
+}
+
+.client_frm .tbl_form table .add_area table td span {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.client_frm .tbl_form .tbl_type2 th {
+  background: #83521d;
+  color: #fff;
+}
+
+.client_frm .tbl_form table td input[type='text'],
+.client_frm .tbl_form table td input[type='email'] {
+  padding: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.client_frm .tbl_form table td textarea {
+  width: 100%;
+  height: 130px;
+  padding: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.client_frm .tbl_form table td .birth select {
+  width: 60px;
+}
+
+.other_title {
+  padding: 15px 10px;
+  background: #f29700;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1;
+}
+
+.client_frm .agree {
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 5px !important;
+  font-size: 12px;
+}
+
+.client_frm .frm_btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: #f29700;
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 auto 30px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 265px;
+  border-radius: 5px;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.client_frm .frm_btn:hover {
+  opacity: 0.7;
+}
+
+/* confirm */
+.client_frm .confirm table td {
+  background-color: none;
+}
+
+.client_frm .tbl_form table td {
+  padding: 15px;
+}
+
+.client_frm .tbl_form table td .item_list {
+  padding: 15px 0 15px 15px;
+  background: #fff;
+}
+
+.client_frm .tbl_form table td .item_list ul li {
+  float: left;
+  width: 235px;
+  margin: 0 0 5px;
+}
+
+.client_frm .tbl_form table td .item_list ul li.last {
+  width: 215px;
+}
+
+.client_frm .tbl_form table td .item_list ul li span {
+  margin: 0 10px 0 0;
+}
+
+.client_frm .tbl_form table td .item_list ul li img {
+  margin: 0 10px 0 0;
+  vertical-align: -7px;
+}
+
+.client_frm .tbl_form table td .item_list ul li input {
+  margin: 0 10px 0 0;
+  vertical-align: -2px;
+}
+
+.client_frm .tbl_form table td ul.purchase li input {
+  margin: 0 5px 0 0;
+  vertical-align: -1px;
+}
+
+/* スマートフォン用 */
+@media screen and (min-width: 0) and (max-width: 768px) {
+  .client_frm .tbl_form table {
+    margin-bottom: 0;
+  }
+
+  .client_frm .heading {
+    padding: 10px 10px 0;
+  }
+
+  .client_frm .heading .title {
+    font-size: 16px;
+  }
+
+  .client_frm .heading p {
+    padding: 0;
+  }
+
+  .client_frm .tbl_form table th,
+  .client_frm .tbl_form table td {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .client_frm .tbl_form table th {
+    padding: 4px 10px;
+  }
+
+  .client_frm .tbl_form table th .required {
+    margin-left: 10px;
+    padding: 3px 4px;
+    line-height: 1;
+  }
+
+  .client_frm .tbl_form table td {
+    font-size: 12px;
+  }
+
+  .client_frm .tbl_form table .add_area table th.v_top {
+    padding: 0;
+  }
+
+  .client_frm .tbl_form table .add_area table td span {
+    display: block;
+    margin: 5px 0 0 0;
+  }
+
+  .client_frm .tbl_form table td input[type='text'] {
+    border: 1px solid #a6a6a6;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+  }
+
+  .client_frm .tbl_form table td select {
+    height: 27px;
+    font-size: 14px;
+  }
+
+  .other_title {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .client_frm .agree a {
+    text-decoration: underline;
+  }
+
+  .client_frm .tbl_form table td {
+    padding: 8px 10px;
+  }
+}
+
+/* エラー画面・確認画面・完了画面
+------------------------------------------*/
+.client_frm .confirm table {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.client_frm .confirm table {
+  border-collapse: collapse;
+  padding: 0;
+}
+
+.client_frm .confirm table td table td table th,
+.client_frm .confirm table td table td table td {
+  border: 1px solid #ccc;
+  font-size: 14px;
+  text-align: center;
+}
+
+.client_frm .confirm_mse,
+.client_frm .error p,
+.client_frm .finish_mse {
+  font-size: 14px;
+  text-align: center;
+  line-height: 2;
+}
+
+.client_frm .finish_mse span {
+  color: #e46c0a;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.client_frm .error .error_mse {
+  color: #ff0000 !important;
+}
+
+.client_frm .finish_mse {
+  padding: 40px 10px;
+}
+
+/* スマートフォン用 */
+@media screen and (min-width: 0) and (max-width: 768px) {
+  .client_frm .confirm {
+    padding: 0 10px;
+  }
+
+  .client_frm .confirm table {
+    width: 100% !important;
+  }
+
+  .client_frm .confirm table td table td {
+    text-align: center;
+  }
+
+  .client_frm .confirm table td table td table td {
+    padding: 5px;
+  }
+
+  .client_frm .confirm input {
+    padding: 5px;
+  }
+
+  .client_frm .confirm_mse,
+  .client_frm .error p {
+    padding: 10px 10px 0;
+  }
+
+  .client_frm .confirm table th,
+  .client_frm .confirm table td {
+    display: table-cell;
+  }
+
+  .client_frm table:first-child td {
+    border: none;
+  }
+
+  th,
+  td {
+    padding: 0;
+  }
+
+  .client_frm .finish_mse {
+    text-align: left;
+  }
+
+  .client_frm .finish_mse span {
+    color: #e46c0a;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+  }
+}
+
+/*---------------------------------------
+  調整用css
+-----------------------------------------*/
+.w70 {
+  width: 70px !important;
+}
+.w100 {
+  width: 100px !important;
+}
+.w150 {
+  width: 150px !important;
+}
+.w200 {
+  width: 200px !important;
+}
+.w300 {
+  width: 300px !important;
+}
+
+/* スマートフォン用 */
+@media screen and (min-width: 0) and (max-width: 768px) {
+  .w200,
+  .w300 {
+    width: 100% !important;
+  }
+}
