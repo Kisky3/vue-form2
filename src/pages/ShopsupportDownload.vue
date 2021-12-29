@@ -199,7 +199,6 @@
 import {
   url,
   logo,
-  offerFormUrl,
   guideIcon,
   telFormat,
   toHalfWidth
@@ -228,7 +227,6 @@ export default {
       formData: formFields,
       url: url,
       logo: logo,
-      offerFormUrl: offerFormUrl,
       guideIcon: guideIcon,
       primacyUrl: 'https://www.kou.jp/privacy',
       loading: false
@@ -258,7 +256,7 @@ export default {
     },
     async submitForm() {
       alert('送信する')
-      console.log(this.mapParams())
+      // console.log(this.mapParams())
       // this.loading = true
       //TODO:送信処理
       // await post(this.registerEndpoint, this.mapParams())

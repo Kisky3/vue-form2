@@ -1,3 +1,4 @@
+/* eslint-disable */
 let url
 export const env = process.env.VUE_APP_ENV
 export const nodeenv = process.env.NODE_ENV

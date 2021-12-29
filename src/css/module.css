@@ -1,0 +1,2009 @@
+@charset "UTF-8";
+/* ===================================================================
+
+共通（ヘッダー、コンテンツ 、フッター、パンくず）
+
+=================================================================== */
+
+/*----------------------------------------------------
+汎用css
+----------------------------------------------------*/
+a:link {
+  color: #0962ad;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.m5 {
+  margin: 5px !important;
+}
+
+.m10 {
+  margin: 10px !important;
+}
+
+.mbtm0 {
+  margin-bottom: 0 !important;
+}
+
+.mbtm5 {
+  margin-bottom: 5px !important;
+}
+
+.mbtm10 {
+  margin-bottom: 10px !important;
+}
+
+.mbtm15 {
+  margin-bottom: 15px !important;
+}
+
+.mbtm20 {
+  margin-bottom: 20px !important;
+}
+
+.mbtm25 {
+  margin-bottom: 25px !important;
+}
+
+.mbtm30 {
+  margin-bottom: 30px !important;
+}
+
+.mbtm35 {
+  margin-bottom: 35px !important;
+}
+
+/*----------clearfix----------*/
+.clearfix:after {
+  /*for modern browser*/
+  content: '.';
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+
+.clearfix {
+  /*for IE7*/
+  min-height: 1px;
+}
+
+* html .clearfix {
+  /*for IE6 below, MacIE5*/
+  height: 1px;
+  /*\*/
+  /*/height: auto;overflow: hidden;/**/
+}
+
+/*----------clearfix / end----------*/
+/*----------------------------------------------------
+#基本
+----------------------------------------------------*/
+#page {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contents {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#contents .pageTop {
+  clear: both;
+  text-align: right;
+}
+
+#main {
+  width: 760px;
+  margin: 0;
+  clear: both;
+}
+
+#mainBody {
+  float: left;
+  width: 720px;
+}
+
+#mainBody p {
+  margin: 0 0 1.5em;
+}
+
+#sdBox {
+  width: 220px;
+  float: right;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.btnCenter {
+  padding: 30px 0 20px 0;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* -----------------------------------------------------------
+#headerヘッダー
+----------------------------------------------------------- */
+#header * {
+  box-sizing: border-box;
+}
+
+#header {
+  float: none;
+  width: 100%;
+  position: relative;
+  font-family: "Hiragino Sans", "ヒラギノ角ゴシック", "ＭＳ Ｐゴシック", verdana, arial, sans-serif;
+  font-weight: 300;
+  height: auto;
+  color:#212121;
+  border-bottom: 1px solid #D2D2D2;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+#header h1 {
+  float: none;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  color: #000000;
+  font-size: 11px;
+  line-height: 2.5;
+  letter-spacing: 1px;
+  font-weight: 300;
+  padding-left: 0;
+}
+
+.header-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header-main {
+  display: flex;
+  padding: 8px 0;
+  justify-items: center;
+}
+
+#header p.logo {
+  float: left;
+  width: 185px;
+  height: 50px;
+  margin-left: 8px;
+}
+
+#header p.renewal {
+  margin-left:25px;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  align-self: center;
+}
+
+#header p.renewal span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#header p.renewal span.cnt {
+  color: #F39725;
+  font-weight: 600;
+  font-size: 20px;
+  padding-right: 3px;
+  font-family: meiryo;
+}
+
+.header-action {
+  display: flex;
+  margin-left: auto;
+  align-self: center;
+  line-height: 50px;
+}
+
+.header-action a:first-child {
+  font-weight: 600;
+}
+
+.header-action a {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  font-size: 11px;
+  color: #212121;
+  text-align: center;
+  margin-left: 16px;
+  transition: all .3s ease;
+}
+
+.header-action a img {
+  display: block;
+  margin: 0 auto;
+  clear: both;
+}
+
+.header-action a span {
+  display: block;
+  line-height: 1;
+  margin-top: 5px;
+}
+
+.header-action a:hover {
+  opacity: 0.7;
+}
+
+.header-action a.btn_default {
+  font-size: 12px;
+  background-color: #D9D9D9;
+  line-height: 1.6;
+  padding: 10px 10px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+ul#site_nav * {
+  box-sizing: border-box;
+}
+
+ul#site_nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  list-style: none;
+  margin-top: 5px;
+}
+
+ul#site_nav li {
+  -ms-flex: 1;
+  flex: 1;
+}
+
+ul#site_nav li.active>a {
+  border-bottom-color: #FE9F47;
+}
+
+ul#site_nav li:last-child>a>span {
+  border-right: none;
+}
+
+ul#site_nav li a {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #212121;
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 6px solid transparent;
+  transition: all .3s ease;
+}
+
+ul#site_nav li a:hover {
+  opacity: 0.7;
+}
+
+ul#site_nav li a span {
+  display: block;
+  padding: 0 5px;
+  width: 100%;
+  border-right: 1px solid #D2D2D2;
+  line-height: 1.3;
+}
+
+#cta_fixed {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-out;
+  position: fixed;
+  z-index: 999999;
+  right: 25px;
+  top: 656px;
+  top: 74%;
+}
+
+#cta_fixed a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: #48A503 0% 0% no-repeat padding-box;
+  width: 126px;
+  height: 126px;
+  border: 3px solid #FFFFFF;
+  border-radius: 126px;
+  text-decoration: none;
+  text-align: center;
+  color: #212121;
+  font-size: 20px;
+  padding: 15px 10px;
+  box-sizing: border-box;
+}
+
+#cta_fixed a span {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+#cta_fixed a h3 {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  color: #FFFF00;
+  line-height: 1.2;
+}
+
+#cta_fixed.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* -----------------------------------------------------------
+#sdBox右ナビ
+----------------------------------------------------------- */
+#sdBox h3 {
+  height: 21px;
+  padding: 8px 0 0 15px;
+  background: url(https://oikura.jp/common/img/bg_side_ttl.gif?20160614) repeat-x;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#sdBox .prArea,
+#sdBox .sideService,
+#sdBox .otherCategory {
+  border: 1px solid #dedede;
+}
+
+#sdBox .inner {
+  padding: 9px 9px 0;
+}
+
+#sdBox #realtime_satei {
+  position: relative;
+  border-left: 3px solid #ffecbf;
+  border-right: 3px solid #ffecbf;
+  border-bottom: 3px solid #ffecbf;
+  /* background-color: #ffecbf; */
+  /* padding-bottom: 5px; */
+  zoom: 1;
+}
+
+#sdBox #realtime_satei h2 {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  /* padding: 2px 2px 0; */
+  zoom: 1;
+}
+
+#sdBox #realtime_satei .inner_realtime {
+  background: #fff;
+  padding: 30px 0 0;
+}
+
+#realtime_satei .inner_realtime .list_box {
+  position: relative;
+}
+
+#sdBox #realtime_satei .inner_realtime .list_box ul {
+  padding: 7px 7px 10px;
+  background: linear-gradient(#ffffff, #fff3e0);
+  background: -webkit-gradient(linear,
+    left top,
+    left bottom,
+    from(#ffffff),
+    to(#fff3e0));
+  background: -moz-linear-gradient(to bottom, #ffffff, #fff3e0);
+  /*IE6 IE7 */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startcolorstr=#ffffff, endcolorstr=#FFF3E0);
+  /* IE8 */
+  -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(GradientType=0,startcolorstr=#ffffff, endcolorstr=#FFF3E0))';
+  zoom: 1;
+}
+
+#sdBox #realtime_satei .inner_realtime .list_box ul li {
+  zoom: 1;
+  margin-bottom: 10px;
+}
+
+#sdBox #realtime_satei .inner_realtime .list_box ul li.last {
+  margin-bottom: 0 !important;
+}
+
+#sdBox #realtime_satei .inner_realtime .list_box ul li dl {
+  font-size: 10px;
+  line-height: 1.4;
+  color: #000000;
+}
+
+#sdBox #realtime_satei .inner_realtime dt {
+  margin-bottom: 1px;
+}
+
+#sdBox #realtime_satei .inner_realtime .state {
+  font-weight: bold;
+}
+
+#sdBox #realtime_satei .inner_realtime .goods {
+  font-weight: bold;
+  color: #ff0000;
+}
+
+#sdBox #realtime_satei .inner_realtime .Purchase {
+  font-weight: bold;
+  color: #0070c0;
+}
+
+#ajax_loader {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  width: 220px;
+  height: 43px;
+  background: url(https://oikura.jp/common/img/ajax-loader.gif?20160614) no-repeat 50% 50%;
+  zoom: 1;
+}
+
+/* .mypage
+----------------------------------------------------------- */
+#sdBox .mypage {
+  background: #f3f3f3;
+  border: 1px solid #dedede;
+  padding: 10px 10px 15px 10px;
+}
+
+#sdBox .mypage p {
+  font-size: 10px;
+}
+
+#sdBox .mypage .txt {
+  margin-bottom: 11px;
+}
+
+#sdBox .mypage .btn {
+  margin: 0 -10px 13px;
+  text-align: center;
+}
+
+#sdBox .mypage .pass {
+  text-align: right;
+}
+
+#sdBox .mypage .pass a {
+  padding-left: 10px;
+  background: url(https://oikura.jp/common/img/icon_arrow01.gif?20160614) no-repeat 0 3px;
+}
+
+/* .linkList
+----------------------------------------------------------- */
+#sdBox .sideNav dl {
+  background: url(https://oikura.jp/common/img/bg_side_menu.gif?20160614) repeat-x bottom;
+  border-bottom: 1px dotted #cdcdcd;
+}
+
+#sdBox .sideNav dl.first {
+  border-top: 1px dotted #cdcdcd;
+}
+
+#sdBox .sideNav dl dd a {
+  display: block;
+  height: 34px;
+  padding: 3px 10px 7px 7px;
+  text-decoration: none;
+  zoom: 1;
+  z-index: 10;
+}
+
+#sdBox .sideNav dl dd a img {
+  float: left;
+  margin-right: 15px;
+  vertical-align: bottom;
+  zoom: 1;
+}
+
+#sdBox .sideNav dl dd span.text {
+  float: left;
+  width: 123px;
+  padding-top: 13px;
+  font-weight: bold;
+  padding-left: 13px;
+  background: url(https://oikura.jp/common/img/icon_arrow02.gif?20160614) no-repeat 0 18px;
+  color: #666666;
+  font-size: 12px;
+}
+
+/* .sideService
+----------------------------------------------------------- */
+#sdBox .sideService {
+  border: 1px solid #dedede;
+  padding-bottom: 9px;
+}
+
+#sdBox .prArea .inner {
+  padding: 9px 9px 0;
+}
+
+#sdBox .sideService dl dt {
+  width: 70px;
+  float: left;
+  margin-right: 10px;
+}
+
+#sdBox .sideService dl dd {
+  width: 120px;
+  float: left;
+  line-height: 1.2;
+}
+
+#sdBox .sideService dl dd a {
+  color: #68361b;
+  font-weight: bold;
+}
+
+/* .prArea
+----------------------------------------------------------- */
+#sdBox .prArea .bnr,
+#sdBox .prArea dl {
+  margin-bottom: 9px;
+}
+
+#sdBox .prArea dl dt {
+  width: 70px;
+  float: left;
+  margin-right: 10px;
+}
+
+#sdBox .prArea dl dd {
+  width: 120px;
+  float: left;
+  line-height: 1.2;
+}
+
+#sdBox .prArea dl dd a {
+  color: #68361b;
+  font-weight: bold;
+}
+
+/* .otherCategory
+----------------------------------------------------------- */
+#sdBox .otherCategory {
+  border: 1px solid #dedede;
+}
+
+#sdBox .otherCategory .inner {
+  padding: 5px 9px 4px !important;
+}
+
+#sdBox .otherCategory a {
+  color: #68361b;
+  text-decoration: none;
+}
+
+#sdBox .otherCategory dl {
+  border-bottom: 1px solid #cccccc;
+}
+
+#sdBox .otherCategory dl.last {
+  border-bottom: none !important;
+}
+
+#sdBox .otherCategory dl dt {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+#sdBox .otherCategory dl dt img {
+  margin-right: 10px;
+  vertical-align: -6px;
+}
+
+#sdBox .otherCategory dl dd ul li {
+  height: 27px;
+  border-bottom: 1px dotted #cccccc;
+  line-height: 2.5;
+  padding-left: 0;
+}
+
+#sdBox .otherCategory dl dd ul li a {
+  width: 170px;
+  height: 100%;
+  display: block;
+  padding-left: 30px;
+}
+
+#sdBox .otherCategory dl dd ul li.active {
+  padding-left: 30px;
+  background: #fbedcf !important;
+  border: none !important;
+  font-weight: bold;
+}
+
+#sdBox .otherCategory dl dd ul li.first {
+  border-top: 1px dotted #cccccc;
+}
+
+#sdBox .otherCategory dl dd ul li.last {
+  border-bottom: none !important;
+}
+
+/* -----------------------------------------------------------
+.topicpathパンくず
+----------------------------------------------------------- */
+.topicpath {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto !important;
+  padding: 15px 5px !important;
+}
+
+.topicpath p {
+  line-height: 100%;
+}
+
+.topicpath p img {
+  vertical-align: middle;
+  padding: 0 3px;
+}
+
+.tp_bottom {
+  background: none;
+  border-bottom: 1px solid #cccccc;
+}
+
+.topicpath_new {
+  padding: 10px 5px;
+}
+
+.topicpath_new .left {
+  float: left;
+  line-height: 1.2;
+}
+
+.topicpath_new .pageTop {
+  float: right;
+}
+
+/* -----------------------------------------------------------
+#footerフッター
+----------------------------------------------------------- */
+#footer {
+  width: 100%;
+  clear: both;
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
+
+.back_to_top {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.back_to_top a {
+  display: inline-block;
+  color: #212121;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.back_to_top img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  transform: rotate(180deg);
+}
+
+.back_to_top span {
+  display: block;
+}
+
+#cont-com-area {
+  clear: both;
+  padding: 10px;
+}
+
+#cont-com-area p.cont-com-area-p {
+  color: #999999;
+  font-size: 80%;
+}
+
+/*--- footerバナー */
+#footer p.bottomBnr {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  border-top: 0px solid #ccc;
+  padding: 10px 0;
+}
+
+/*--- サイトカテゴリー */
+#footer div#siteCategory,
+#footer div#siteService,
+#footer div#siteLink {
+  font-size: 84%;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+#footer div#siteCategory h2,
+#footer div#siteService h2,
+#footer div#siteLink h2 {
+  font-weight: bold;
+}
+
+#footer div#siteCategory p,
+#footer div#siteService p,
+#footer div#siteLink p {
+  font-weight: bold;
+}
+
+#corporation {
+  padding-top: 10px !important;
+  border-top: 1px solid #d2d2d2;
+  margin: 0 auto;
+  padding: 5px 0;
+  text-align: center;
+}
+
+#corporation .floatCancell {
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+}
+
+#corporation address {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+#corporation p.logo {
+  display: block;
+  height: 57px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#footer ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#footer ul li {
+  display: inline;
+}
+
+#footer ul li a {
+  border-right: 1px solid #999999;
+  padding: 0 7px 0 7px;
+  white-space: nowrap;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+
+#footer ul li a:hover {
+  text-decoration: underline;
+}
+
+#footer ul li.last a {
+  border-right: none;
+}
+
+#footer .copyright {
+  font-size: 11px;
+  text-align: center;
+  font-style: inherit;
+}
+
+#footer .area_linkList {
+  border-bottom: 1px solid #cccccc;
+  margin-top: 10px;
+  padding: 0 10px;
+  font-size: 11px;
+}
+
+#footer .area_linkList dl {
+  margin-bottom: 15px;
+}
+
+#footer .area_linkList dt {
+  color: #984807;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* -----------------------------------------------------------
+#subサイドバー、サブ
+----------------------------------------------------------- */
+#sub {
+  float: right;
+  width: 200px;
+}
+
+#sub .sub-bn {
+  padding-bottom: 10px;
+}
+
+#sub .sub-bn a:hover img {
+  -ms-filter: 'alpha( opacity=70)';
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+
+/*sub-navi01 */
+#sub .sub-navi01 {
+  margin-bottom: 10px;
+}
+
+#sub .sub-navi01 h2 {
+  background: url(https://oikura.jp/img/shop/bg-sub-h2.gif?20160614) no-repeat left top;
+  font-weight: bold;
+  height: 24px;
+  padding-left: 13px;
+  padding-top: 6px;
+  width: 187px;
+}
+
+#sub .sub-navi01 p {
+  background: url(https://oikura.jp/img/shop/bg-sub-h2.gif?20160614) no-repeat left top;
+  font-weight: bold;
+  height: 24px;
+  padding-left: 13px;
+  padding-top: 6px;
+  width: 187px;
+}
+
+#sub .sub-navi01 p.sub-navi01_re {
+  background: url(https://oikura.jp/img/shop/bg-sub-recycle.gif?20160614) no-repeat left top;
+  font-weight: bold;
+  height: 24px;
+  padding-left: 13px;
+  padding-top: 6px;
+  width: 230px;
+}
+
+#sub .sub-navi01 ul {
+  border-bottom: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  padding: 10px 10px 0;
+  text-align: center;
+}
+
+#sub .sub-navi01 ul li {
+  margin-bottom: 10px;
+}
+
+/*sub-navi02 */
+#sub .sub-navi02 {
+  margin-bottom: 10px;
+}
+
+#sub .sub-navi02 ul {
+  background: url(https://oikura.jp/img/shop/bg-sub-infoloop.gif?20160614) repeat-y;
+  padding: 10px 10px 0;
+  width: 180px;
+}
+
+#sub .sub-navi02 ul li.b-B {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px dotted #666666;
+  clear: both;
+  height: 1%;
+  overflow: hidden;
+}
+
+#sub .sub-navi02 ul li.last-info {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  clear: both;
+  height: 1%;
+  overflow: hidden;
+}
+
+#sub .sub-navi02 .sub-img {
+  float: left;
+  width: 34px;
+}
+
+#sub .sub-navi02 dl {
+  width: 140px;
+  padding-left: 5px;
+  float: left;
+}
+
+#sub .sub-navi02 dl dt {
+  font-weight: bold;
+}
+
+/*---sub-navi03---*/
+#sub .sub-navi03 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*創庵追加*/
+.subr_bottom {
+  background: transparent url(https://oikura.jp/img/shop/subr_bottom.gif?20160614) no-repeat scroll 0 0;
+  height: 4px;
+}
+
+#sub .sub-navi02 ul li.arrow-area {
+  padding: 0px 0px 0px 15px;
+  border-bottom: 1px dotted #666666;
+}
+
+#sub .sub-navi02 ul div.arrow {
+  background: url(https://oikura.jp/img/shop/subr_arrow.gif?20160614) no-repeat left center;
+  padding: 5px 5px 5px 10px;
+}
+
+.subr_bottom {
+  background: url(https://oikura.jp/img/shop/subr_bottom.gif?20160614) no-repeat;
+  height: 4px;
+}
+
+.clear {
+  clear: both;
+}
+
+/*----------------------------------------------------
+廃棄・処分業者ページ
+----------------------------------------------------*/
+#waste h3.pref_tit {
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  zoom: 1;
+}
+
+#waste h3.pref_tit span.pref {
+  color: #e43f3f;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#waste h3.pref_tit a.btn {
+  vertical-align: middle;
+}
+
+*html #waste h3.pref_tit a.btn {
+  position: relative;
+  top: -2px;
+}
+
+/* IE6 hack */
+*:first-child+html #waste h3.pref_tit a.btn {
+  position: relative;
+  top: -2px;
+}
+
+/* IE7 hack */
+#waste h3.pref_tit span.note {
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  color: #333333;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+#waste table.disposalTbl th {
+  height: 41px;
+  background: url(https://oikura.jp/common/img/bg_disposal_tbl_th.gif?20160614) left top;
+  border-left: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+#waste table.disposalTbl td {
+  height: 37px;
+  padding: 10px;
+  border: 1px solid #dedede;
+}
+
+#waste table.disposalTbl td.supplier {
+  font-weight: bold;
+}
+
+#waste table.disposalTbl td.checkON {
+  background: #fff2e7;
+  color: #e38000;
+  text-align: center;
+  font-size: 18px;
+}
+
+#waste table.disposalTbl td.checkOFF {
+  color: #e38000;
+  text-align: center;
+  font-size: 18px;
+}
+
+#waste table.disposalTbl td.tel {
+  padding: 0;
+}
+
+#waste table.disposalTbl td.tel p {
+  background: url(https://oikura.jp/common/img/icon_tel.gif?20160614) no-repeat 10px 0;
+  padding-left: 45px;
+  color: #ff0000;
+  font-family: 'ＭＳ ゴシック', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#waste table.disposalTbl td.map {
+  text-align: center;
+}
+
+#waste .note {
+  text-align: right;
+  font-size: 11px;
+}
+
+#mapArea {
+  background: url(https://oikura.jp/cat/common/img/map.jpg?20160614) no-repeat left top;
+  float: left;
+  margin: 0;
+  position: relative !important;
+  width: 450px;
+  height: 394px;
+}
+
+#mapArea .title {
+  width: 300px;
+  position: absolute;
+  z-index: 12000;
+  top: -25px;
+  left: 0;
+  color: #ad4e09;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#mapArea #map {
+  position: relative;
+}
+
+#area01,
+#area02,
+#area03,
+#area04,
+#area05,
+#area06,
+#area07,
+#area08,
+#area09,
+#area10 {
+  position: absolute;
+  line-height: 1.4;
+}
+
+#area01 a,
+#area02 a,
+#area03 a,
+#area04 a,
+#area05 a,
+#area06 a,
+#area07 a,
+#area08 a,
+#area09 a,
+#area10 a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+}
+
+#area01 a:hover,
+#area02 a:hover,
+#area03 a:hover,
+#area04 a:hover,
+#area05 a:hover,
+#area06 a:hover,
+#area07 a:hover,
+#area08 a:hover,
+#area09 a:hover,
+#area10 a:hover {
+  text-decoration: underline;
+}
+
+#area02,
+#area03,
+#area04,
+#area05,
+#area07,
+#area08 {
+  overflow: hidden;
+  width: 94px;
+}
+
+#area01_inner,
+#area02_inner,
+#area03_inner,
+#area04_inner,
+#area05_inner,
+#area06_inner,
+#area07_inner,
+#area08_inner,
+#area09_inner,
+#area10_inner {
+  position: relative;
+}
+
+#area01_inner ul,
+#area02_inner ul,
+#area03_inner ul,
+#area04_inner ul,
+#area05_inner ul,
+#area06_inner ul,
+#area07_inner ul,
+#area08_inner ul,
+#area09_inner ul,
+#area10_inner ul {
+  position: absolute;
+}
+
+#area02 li,
+#area03 li,
+#area04 li,
+#area05 li,
+#area07 li,
+#area08 li {
+  float: left;
+  margin: 0 12px 0 0;
+}
+
+#area01 {
+  left: 329px;
+  top: 32px;
+}
+
+#area01_inner ul {
+  left: 32px;
+  top: 26px;
+}
+
+#area02 {
+  left: 328px;
+  top: 107px;
+}
+
+#area02_inner ul {
+  left: 12px;
+  top: 24px;
+}
+
+#area03 {
+  left: 328px;
+  top: 208px;
+}
+
+#area03_inner ul {
+  left: 10px;
+  top: 7px;
+}
+
+#area04 {
+  left: 235px;
+  top: 180px;
+}
+
+#area04_inner ul {
+  left: 15px;
+  top: 14px;
+}
+
+#area05 {
+  left: 235px;
+  top: 259px;
+}
+
+#area05_inner ul {
+  left: 15px;
+  top: 7px;
+}
+
+#area06 {
+  left: 179px;
+  top: 180px;
+}
+
+#area06_inner ul {
+  left: 10px;
+  top: 16px;
+}
+
+#area07 {
+  left: 96px;
+  top: 180px;
+}
+
+#area07_inner ul {
+  left: 10px;
+  top: 7px;
+}
+
+#area08 {
+  left: 96px;
+  top: 253px;
+}
+
+#area08_inner ul {
+  left: 7px;
+  top: 9px;
+}
+
+#area09 {
+  left: 15px;
+  top: 187px;
+}
+
+#area09_inner ul {
+  left: 18px;
+  top: 10px;
+}
+
+#area10 {
+  left: 18px;
+  top: 344px;
+}
+
+#area10_inner ul {
+  left: 7px;
+  top: 4px;
+}
+
+p.area_seach {
+  left: 33px;
+  top: 13px;
+  position: absolute;
+  font-weight: bold;
+}
+
+/* メインインクルード */
+#disp_main {
+  margin-bottom: 15px;
+}
+
+#disp_main dl {
+  background: url('https://oikura.jp/common/img/disp_main.gif?20160614') repeat-x scroll 0 0 transparent;
+  height: 313px;
+  padding: 0 17px 0 27px;
+  line-height: 1.6;
+  position: relative;
+}
+
+#disp_main dl dt {
+  float: left;
+  width: 485;
+  padding-top: 76px;
+}
+
+#disp_main dl dd {
+  float: right;
+  width: 383px;
+}
+
+#disp_main dl dd p {
+  position: absolute;
+  top: 20px;
+  right: 9px;
+  width: 170px;
+  font-size: 0;
+}
+
+#disp_main dl dd ul {
+  padding-top: 103px;
+}
+
+#disp_main dl dd ul li.mb36 {
+  margin-bottom: 36px;
+}
+
+#disp_main dl dd ul li.mb32 {
+  margin-bottom: 32px;
+}
+
+/*----------------------------------------------------
+修理業者ページ
+----------------------------------------------------*/
+#repair #repair_main {
+  margin-bottom: 15px;
+}
+
+#repair h3.pref_tit {
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  zoom: 1;
+}
+
+#repair h3.pref_tit span.pref {
+  color: #e43f3f;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#repair h3.pref_tit span.cat {
+  color: #e43f3f;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#repair .selectNav {
+  position: relative;
+  top: -32px;
+  z-index: 999;
+  left: 588px;
+  width: 372px;
+  height: 32px;
+  background: url(https://oikura.jp/common/img/repair/bg_select_nav.gif?20160614) no-repeat;
+  zoom: 1;
+}
+
+#repair .selectNav .nav01 {
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  width: 134px;
+  height: 22px;
+  /* SVG as background image (IE9) */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMzAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGREZERkQiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFNkU2RTYiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMzApIiAvPgo8L3N2Zz4=);
+  -pie-background: linear-gradient(to bottom, #fdfdfd, #e6e6e6);
+  background: -moz-linear-gradient(to bottom, #fdfdfd, #e6e6e6);
+  background: -webkit-gradient(linear,
+    left top,
+    left bottom,
+    from(#fdfdfd),
+    to(#e6e6e6));
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -pie-border-radius: 3px;
+  /* behavior: url(https://oikura.jp/common/js/PIE.htc); */
+}
+
+#repair .selectNav .nav02 {
+  position: absolute;
+  top: 6px;
+  left: 165px;
+  width: 196px;
+  min-height: 22px;
+  height: auto !important;
+  height: 22px;
+  /* SVG as background image (IE9) */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMzAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGREZERkQiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFNkU2RTYiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMzApIiAvPgo8L3N2Zz4=);
+  -pie-background: linear-gradient(to bottom, #fdfdfd, #e6e6e6);
+  background: -moz-linear-gradient(to bottom, #fdfdfd, #e6e6e6);
+  background: -webkit-gradient(linear,
+    left top,
+    left bottom,
+    from(#fdfdfd),
+    to(#e6e6e6));
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -pie-border-radius: 3px;
+  /* behavior: url(/common/js/PIE.htc); */
+}
+
+#repair .selectNav .nav01 a#btnPref,
+#repair .selectNav .nav02 a#btnGenre {
+  display: block;
+  padding: 3px 0 0 25px;
+  background: url(https://oikura.jp/common/img/repair/icon_nav.gif?20160614) no-repeat 9px 7px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  outline: none;
+}
+
+#repair .selectNav .genreList,
+#repair .selectNav .genreListOn {
+  padding: 0 0 10px 25px;
+}
+
+#repair .selectNav .note {
+  padding: 3px 0;
+  text-align: left;
+}
+
+#repair table.repairTbl {
+  margin-top: -32px;
+}
+
+#repair table.repairTbl th {
+  height: 41px;
+  background: url(https://oikura.jp/common/img/repair/bg_repair_tbl_th.gif?20160614) left top;
+  border-left: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+#repair table.repairTbl td {
+  height: 56px;
+  padding: 10px;
+  border: 1px solid #dedede;
+}
+
+#repair table.repairTbl td.supplier {
+  font-weight: bold;
+}
+
+#repair table.repairTbl td.tel {
+  padding: 0;
+}
+
+#repair table.repairTbl td.genre {
+  padding: 2px 0 0 3px;
+}
+
+#repair table.repairTbl td.genre ul li {
+  width: 57px;
+  float: left;
+  margin: 0 1px 2px 0;
+}
+
+#repair table.repairTbl p {
+  word-wrap: break-word;
+}
+
+#repair table.repairTbl td.tel p {
+  padding-left: 9px;
+  color: #ff0000;
+  font-family: 'font-family: Arial,Helvetica,sans-serif';
+  font-weight: bold;
+  font-size: 20px;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+#repair table.repairTbl td.tel p span {
+  font-weight: normal;
+  font-size: 10px;
+}
+
+#repair table.repairTbl td a.viewMap {
+  font-size: 10px;
+}
+
+#repair .note {
+  font-size: 11px;
+  text-align: right;
+}
+
+/* テーブル幅 */
+.w65 {
+  width: 65px !important;
+}
+
+.w94 {
+  width: 94px !important;
+}
+
+.w95 {
+  width: 95px !important;
+}
+
+.w171 {
+  width: 171px !important;
+}
+
+.w208 {
+  width: 208px !important;
+}
+
+.w228 {
+  width: 228px !important;
+}
+
+.w241 {
+  width: 241px !important;
+}
+
+.w244 {
+  width: 244px !important;
+}
+
+.w261 {
+  width: 261px !important;
+}
+
+.w263 {
+  width: 263px !important;
+}
+
+/* 141002追加 CSSスプライト化 */
+#sdBox .mypage .btn a {
+  background: url(https://oikura.jp/common/img/btn_mypage.gif?20160614) no-repeat scroll 0 0 transparent;
+  display: block;
+  height: 53px;
+  margin: 0 auto;
+  width: 205px;
+}
+
+#sdBox .mypage .btn a span {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  /* ie lt 8 */
+  -ms-filter: 'alpha(opacity=0)';
+  /* ie 8 */
+  -moz-opacity: 0;
+  /* FF lt 1.5, Netscape */
+  -khtml-opacity: 0;
+  /* Safari 1.x */
+  zoom: 1;
+  display: block;
+}
+
+#sdBox .sideNav dl.sideNav_icon1 dd a,
+#sdBox .sideNav dl.sideNav_icon2 dd a,
+#sdBox .sideNav dl.sideNav_icon3 dd a,
+#sdBox .sideNav dl.sideNav_icon4 dd a,
+#sdBox .sideNav dl.sideNav_icon5 dd a,
+#sdBox .sideNav dl.sideNav_icon6 dd a,
+#sdBox .sideNav dl.sideNav_icon7 dd a,
+#sdBox .sideNav dl.sideNav_icon8 dd a {
+  background-position: 7px 3px;
+  background-repeat: no-repeat;
+  padding-left: 74px;
+}
+
+#sdBox .sideNav dl.sideNav_icon1 dd a {
+  background-image: url(https://oikura.jp/common/img/icon_menu01.gif?20160614);
+}
+
+#sdBox .sideNav dl.sideNav_icon2 dd a {
+  background-image: url(https://oikura.jp/common/img/icon_menu02.gif?20160614);
+}
+
+#sdBox .sideNav dl.sideNav_icon3 dd a {
+  background-image: url(https://oikura.jp/common/img/icon_menu03.gif?20160614);
+}
+
+#sdBox .sideNav dl.sideNav_icon4 dd a {
+  background-image: url(https://oikura.jp/common/img/icon_menu04.gif?20160614);
+}
+
+#sdBox .sideNav dl.sideNav_icon5 dd a {
+  background-image: url(https://oikura.jp/common/img/icon_menu05.gif?20160614);
+}
+
+#sdBox .sideNav dl.sideNav_icon6 dd a {
+  background-image: url(https://oikura.jp/common/img/icon_menu06.gif?20160614);
+}
+
+#sdBox .sideNav dl.sideNav_icon7 dd a {
+  background-image: url(https://oikura.jp/common/img/icon_menu07.gif?20160614);
+}
+
+#sdBox .sideNav dl.sideNav_icon8 dd a {
+  background-image: url(https://oikura.jp/common/img/icon_menu08.gif?20160614);
+}
+
+#sdBox .sideService .sideService_icon1,
+#sdBox .sideService .sideService_icon2,
+#sdBox .sideService .sideService_icon3,
+#sdBox .sideService .sideService_icon4 {
+  background-repeat: no-repeat;
+  height: 70px;
+  padding-left: 80px;
+}
+
+#sdBox .sideService .sideService_icon1 {
+  background-image: url(https://oikura.jp/common/img/sdBox_service_img01.gif?20160614);
+}
+
+#sdBox .sideService .sideService_icon2 {
+  background-image: url(https://oikura.jp/common/img/sdBox_service_img02.gif?20160614);
+}
+
+#sdBox .sideService .sideService_icon3 {
+  background-image: url(https://oikura.jp/common/img/sdBox_service_img03.gif?20160614);
+}
+
+#sdBox .sideService .sideService_icon4 {
+  background-image: url(https://oikura.jp/common/img/sdBox_service_img04.gif?20160614);
+}
+
+/*----------------------------------------------------
+おいくらマガジン 共通内部リンク
+----------------------------------------------------*/
+.special_magazine {
+  background-color: #fffcf7;
+  border: 1px solid #ffecbf;
+  padding: 10px 10px 0 10px;
+  margin-bottom: 10px;
+}
+
+.special_magazine .magazine_subtitle {
+  position: relative;
+  margin: -10px -10px 10px;
+}
+
+.special_magazine .magazine_subtitle h3 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 5px 5px 5px 55px;
+  background: url(https://oikura.jp/common/img/icon_magazine_book.png?20160614) no-repeat 10px center #6c4715;
+}
+
+.special_magazine .magazine_link {
+  height: 28px;
+  padding: 0 10px;
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  min-width: 230px;
+  font-weight: normal;
+  font-size: 12px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  line-height: 28px;
+}
+
+.special_magazine ul {
+  font-size: 0;
+  margin-right: -10px;
+}
+
+.special_magazine ul li {
+  border: 1px solid #ffecbf;
+  display: block;
+  height: auto;
+  width: 342px;
+  background-color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 10px 10px 0;
+  vertical-align: top;
+}
+
+.special_magazine ul li:first-child {
+  width: 696px;
+}
+
+.special_magazine ul li a {
+  color: #333;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  padding: 10px;
+  /* アニメーション指定 */
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.special_magazine ul li a:hover {
+  opacity: 0.7;
+}
+
+.special_magazine ul li a:first-child {
+  overflow: hidden;
+}
+
+.special_magazine ul li p {
+  float: left;
+  margin: 0 10px 0 0 !important;
+}
+
+.special_magazine ul li a h4 {
+  overflow: hidden;
+  font-weight: bold;
+}
+
+/* カテゴリ ラベル
+-----------------------------*/
+.special_magazine .cate_label {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  min-width: 60px;
+  width: auto !important;
+  width: 60px;
+  margin-bottom: 7px;
+  padding: 1px 5px 0;
+  background: #ccc;
+  color: #fff;
+  font-weight: bold;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* 各カテゴリのカラー */
+.special_magazine .cate_label_kaden {
+  background: #f79647;
+}
+
+.special_magazine .cate_label_kagu {
+  background: #9bbb5a;
+}
+
+.special_magazine .cate_label_hikkoshi {
+  background: #0159fa;
+}
+
+.special_magazine .cate_label_tips {
+  background: #fac302;
+}
+
+.special_magazine .cate_label_souji {
+  background: #03bae1;
+}
+
+.special_magazine .cate_label_brand {
+  background: #ff5b5b;
+}
+
+.special_magazine .cate_label_tokyo_recycle {
+  background: #2e8b57;
+}
+
+.special_magazine .cate_label_gakki {
+  background: #cccc33;
+}
+
+/*----------------------------------------------------
+ 共通モーダル
+----------------------------------------------------*/
+#overlay {
+  background: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  zoom: 1;
+}
+
+#overlay.std-modal-opend {
+  position: fixed !important;
+  z-index: 11000;
+  width: 100%;
+  height: 120%;
+  background: #000;
+  -ms-filter: 'alpha(opacity=50)';
+  opacity: 0.5;
+  zoom: 1;
+  /*IE*/
+}
+
+/* prettyPopin */
+.prettyPopin {
+  display: none;
+  position: absolute;
+  z-index: 11000;
+  top: 50%;
+  left: 50%;
+}
+
+.prettyPopin a#b_close {
+  position: absolute;
+  z-index: 2;
+  top: -14px;
+  right: -14px;
+  width: 30px;
+  height: 30px;
+  background: url(https://oikura.jp/common/img/icon_close_01.png?20171014) bottom left no-repeat;
+}
+
+.prettyPopin .prettyContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+.prettyPopin .prettyContent .prettyContent-container {
+  display: none;
+  padding: 50px 15px 15px 15px;
+}
+
+.prettyPopin .prettyContent .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -14px 0 0 -14px;
+}
+
+/* freecall-modal */
+.freecall-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12000;
+  margin: -150px 0 0 -300px;
+  width: 600px;
+  padding: 0 10px 20px;
+  border: 5px solid #fac090;
+  background: #fff;
+  box-sizing: border-box;
+  text-align: left;
+  font-family: 'メイリオ', Meiryo;
+}
+
+.freecall-modal p {
+  font-size: 12px;
+}
+
+.freecall-modal .heading-01 {
+  margin: 0 0 15px;
+  padding: 6px 8px;
+  background: #eee;
+  border-bottom: 3px solid #f79646;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.freecall-modal .heading-02 {
+  margin: 30px 0 10px;
+  padding: 0 0 0 7px;
+  border-left: 3px solid #f79646;
+  color: #f79646;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.freecall-modal ul {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.freecall-modal ul li {
+  margin: 5px 0 0 15px;
+  font-size: 12px;
+  list-style-type: disc;
+}
+
+.freecall-modal .close {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 35px;
+  height: 35px;
+  background: #f79646;
+  border: none;
+  text-align: left;
+  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  outline: 0;
+}
+
+.freecall-modal .close:hover {
+  -ms-filter: 'alpha(opacity=80)';
+  opacity: 0.8;
+}
+
+.freecall-modal .close:after {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://oikura.jp/common/img/btn_close_01_20x20.png?20170516);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  margin-top: -10px;
+  margin-right: -10px;
+  content: '';
+}
+
+/* PC用 */
+.pc_display {
+  display: block !important;
+}
+.sp_display {
+  display: none !important;
+}
+
+/* For smartphones */
+@media screen and (min-width: 0) and (max-width: 768px) {
+  .pc_display {
+    display: none !important;
+  }
+
+  .sp_display {
+    display: block !important;
+  }
+
+  #header * {
+    box-sizing: inherit;
+  }
+
+  #header {
+    height: 57px;
+    border-bottom: 3px solid #6d3300;
+    text-align: center;
+  }
+
+  #header h1#headerNew span.btnFav a,
+  #header h1#headerNew span.btnBack a {
+    font-weight: 600;
+    box-sizing: unset;
+  }
+
+  #footer {
+    margin-top: 0;
+  }
+
+  #footer ul.footer_link {
+    border-top: 1px solid #c9c9c9;
+  }
+
+  #footer ul.footer_link li {
+    display: list-item;
+    background-color: #ececec;
+    border-bottom: 1px solid #c9c9c9;
+    text-align: left;
+  }
+
+  #footer ul.footer_link li a {
+    border-right: 1px solid #999;
+    white-space: nowrap;
+    margin-left: 5px;
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+  }
+
+  #footer ul.footer_link li a span {
+    display: block;
+    height: 45px;
+    background: url(/common/img/icon_arrow_02.gif?20160419=) no-repeat 100%;
+    background-size: 10px 12px;
+    -moz-background-size: 10px 12px;
+    -webkit-background-size: 10px 12px;
+    color: #3b5b95;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 3.4;
+  }
+
+  #footer .footer_logo {
+    margin: 0 0 1em;
+    padding: 5px;
+    text-align: center;
+  }
+}
