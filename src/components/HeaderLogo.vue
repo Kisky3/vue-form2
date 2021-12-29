@@ -11,7 +11,7 @@
           title="logo"
           alt="logo"
           src="../common/img/logo2.png"
-        /></a>
+        />
         </p>
       </div>
     </div>

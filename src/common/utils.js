@@ -1,3 +1,4 @@
+ /* eslint-disable */
 import parser from 'ua-parser-js'
 import { Path } from '@/config/index.ts'
 export const getUrlParam = () => {
